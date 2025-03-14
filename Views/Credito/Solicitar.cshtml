@@ -1,0 +1,85 @@
+@model SolicitudCredito
+
+@{
+    ViewData["Title"] = "Solicitud de Crédito";
+}
+
+
+<div class="container">
+    <div class="box-credito">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="https://img.freepik.com/free-photo/close-up-person-doing-online-shopping_23-2149159926.jpg">
+            
+        </div>
+        <div class="col-md-7">
+            <h2>Solicitud de Crédito</h2>
+            <div class="box-form">
+            <form asp-action="Solicitar" method="post">
+                <div>
+                    <label>Nombres:</label>
+                    <input asp-for="Nombres" />
+                    <span asp-validation-for="Nombres" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>DNI:</label>
+                    <input asp-for="DNI" />
+                    <span asp-validation-for="DNI" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>Fecha de Contratación:</label>
+                    <input asp-for="FechaContratacion" type="date" />
+                    <span asp-validation-for="FechaContratacion" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>Salario:</label>
+                    <input asp-for="Salario" type="number" />
+                    <span asp-validation-for="Salario" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>Frecuencia de Pago:</label>
+                    <select asp-for="FrecuenciaPago">
+                        <option value="">Seleccione...</option>
+                        <option value="Semanal">Semanal</option>
+                        <option value="Quincenal">Quincenal</option>
+                        <option value="Mensual">Mensual</option>
+                    </select>
+                    <span asp-validation-for="FrecuenciaPago" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>Monto Solicitado:</label>
+                    <input asp-for="MontoSolicitado" type="number" />
+                    <span asp-validation-for="MontoSolicitado" class="text-danger"></span>
+                </div>
+
+                <button type="submit">Solicitar Crédito</button>
+            </form>
+            </div>
+
+            <div class="resultado">
+                <img src="https://galaxdigital.com/cloud/note.png">
+                @if (ViewBag.Resultado != null)
+                {
+                    <h3 style="color:@(ViewBag.Aprobado ? "green" : "red")">@ViewBag.Resultado</h3>
+                }
+
+                @section Scripts {
+                    <partial name="_ValidationScriptsPartial" />
+                }
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+

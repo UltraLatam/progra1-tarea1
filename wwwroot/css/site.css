@@ -1,0 +1,138 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #CF153C !important;
+}
+
+.container {max-width: 1100px !important}
+
+header {background-color: #f6f6f6 !important;}
+header img {max-width: 180px;}
+
+header ul li a:hover {color: #CF153C !important;}
+
+a {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #a0a0a0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+a:before,
+a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #ec111a;
+  transition: 0.5s;
+}
+a:after {
+  left: 0;
+  bottom: -5px;
+}
+a:before {
+  right: 0;
+  top: -5px;
+}
+a:hover {
+  color: #ffffff;
+}
+a:hover:after,
+a:hover:before {
+  width: 100%;
+}
+
+.bg-white {background-color: #ec111a !important;}
+
+.h2, h2 {font-size: 24px !important; margin-bottom: 20px !important; color: #ec1643 !important;}
+
+
+.text-dark {color: #fff !important;}
+
+.box-credito {background-color: #f5f5f5;
+  box-shadow: 0 3px 20px 0 rgb(52 58 64 / 25%);
+  margin-bottom: 30px;
+  border-radius: 15px; margin-top: 50px; padding: 20px;}
+
+.box-credito img {max-width: 100%;}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.box-form {background: #fff; padding: 20px;
+  box-shadow: 0 3px 20px 0 rgb(52 58 64 / 10%); border-radius: 15px; margin-bottom: 30px}
+
+
+  button, input, optgroup, select, textarea {margin-bottom: 10px !important}
+
+
+
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    background: #000;
+    border: 0px;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+
+#Nombres-error, #DNI-error, #FechaContratacion-error, #Salario-error, #FrecuenciaPago-error,
+#MontoSolicitado-error {font-size: 12px}
+
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 7px;
+  border: 1px solid #ffd8e0;
+  background: #f9f9f9;
+  padding: 5px 10px;
+}
+
+
+.resultado {
+  background-color: #fff5c2;
+  padding: 20px;
+  border-radius: 20px;
+  border: 4px solid #fff0a6;
+  float: left;
+}
+
+.resultado h3 {font-size: 20px;}
+
+.resultado img {float: left; width: 80px; margin-right: 20px;}
+
+footer {color: #fff !important; text-align: center; padding-top: 20px; padding-bottom: 20px;
+  position: relative !important;}
+
